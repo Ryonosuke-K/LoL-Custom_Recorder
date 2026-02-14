@@ -1,0 +1,23 @@
+﻿DISCORD_TOKEN=MTQ3MTUwNDkyNTM4NDI0NTQ3Mg.GCZiau.8z0Ou6tNenNn7mgS6wtq58yGKNRa_n3Uoe1TKk
+PUBLIC_BASE_URL=http://localhost:8000
+
+# true: app demo works without Riot OAuth credentials
+DEMO_MODE=true
+
+# Optional for future production flow
+RIOT_CLIENT_ID=
+RIOT_CLIENT_SECRET=
+RIOT_REDIRECT_URI=http://localhost:8000/oauth/callback
+RIOT_REGION_BASE=https://asia.api.riotgames.com
+LOL_PLATFORM=JP1
+
+FERNET_KEY=DnigI3baHgkkiVA8CYTXBMlDq76AmjwkPPnIJ3Q5lRQ=
+STATE_SIGNING_SECRET=h7JuFm8vtf0lC7oHMrvbUxc_H5le2lpmkkLOEFHeQ_k
+DB_PATH=app.db
+
+# Optional: Google Sheets append
+SHEETS_SPREADSHEET_ID=
+SHEETS_WORKSHEET_NAME=records
+GOOGLE_APPLICATION_CREDENTIALS=service-account.json
+DEMO_VIDEO_URL=https://youtu.be/4csJTiWH7tM
+
