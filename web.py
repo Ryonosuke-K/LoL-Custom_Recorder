@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from pathlib import Path
 
 load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
@@ -24,6 +24,13 @@ from state_signer import decode_state, encode_state
 app = FastAPI()
 db = DB(DB_PATH)
 crypto = Crypto(FERNET_KEY)
+
+RIOT_VERIFY_TOKEN = "c768f352-d42e-401a-8dd5-4d88c3c9f925"
+
+
+@app.get("/riot.txt")
+def riot_verify() -> PlainTextResponse:
+    return PlainTextResponse(RIOT_VERIFY_TOKEN)
 
 
 @app.get("/")
